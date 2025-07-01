@@ -1,0 +1,15 @@
+@startuml
+actor User
+participant "Memory Form (UI)" as UI
+participant "Flask App (app.py)" as App
+participant "TimeCapsule Class" as Capsule
+participant "DatabaseManager" as DB
+
+User -> UI : input memory data
+UI -> App : POST /add_memory (JSON)
+App -> Capsule : add_memory(data)
+Capsule -> DB : add_item(data)
+DB --> Capsule : success/failure
+Capsule --> App : result
+App --> UI : return JSON { success: true/false }
+@enduml
