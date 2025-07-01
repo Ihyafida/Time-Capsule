@@ -103,3 +103,5 @@ For any questions, suggestions, or feedback, please feel free to reach out to me
 ## ⚠️ Disclaimer
 
 Ensure compliance with all applicable laws and regulations when using this software, particularly regarding privacy and data protection. Time Capsule captures and stores personal data, so use it responsibly and with proper consent.
+
+Tambahan oleh Ihyafida untuk tugas RPL.
