@@ -1,0 +1,13 @@
+@startuml
+actor User
+participant "Login Page (HTML Form)" as UI
+participant "Flask App (app.py)" as App
+participant "Auth System" as Auth
+
+User -> UI : open /login page
+User -> UI : enter username & password
+UI -> App : POST /login
+App -> Auth : validate_user(username, password)
+Auth --> App : success or failure
+App --> UI : redirect to /dashboard or show error
+@enduml
