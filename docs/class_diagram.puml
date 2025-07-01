@@ -1,0 +1,28 @@
+@startuml
+
+package "App" {
+  class App {
+    +Flask app
+  }
+}
+
+package "Time Capsule" {
+  class TimeCapsule {
+    -db_manager: DatabaseManager
+    +create_item()
+    +get_items()
+  }
+}
+
+package "Modules" {
+  class DatabaseManager {
+    +add_item()
+    +get_all_items()
+    +__init__()
+  }
+}
+
+App --> TimeCapsule : uses
+TimeCapsule --> DatabaseManager : composition
+
+@enduml
